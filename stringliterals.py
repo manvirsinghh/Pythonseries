@@ -1,0 +1,1 @@
+print("My name is Manvir singh \n I am in MCA.")
