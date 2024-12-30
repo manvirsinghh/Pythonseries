@@ -20,7 +20,7 @@ print(fruit[1])
 print(fruit[2])
 print(fruit[3])
 print(fruit[4])
-#or access string with negative indexing
+#for access string with negative indexing
 print(fruit[-1])
 print(fruit[-2])
 print(fruit[-3])
