@@ -39,3 +39,12 @@ name="manvirsingh"
 name='M'+name[1:]
 print(name)
 
+
+s1 = "hello"
+s2 = "world"
+result = s1 + " " + s2 
+print(result)
+ ## to delete the entire string we have to use del keyword ,we cannot delete individual charcaters from string  due to immutability
+color="red"
+del color
+ #number data type
