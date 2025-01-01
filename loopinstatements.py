@@ -73,4 +73,9 @@ print(squared_numbers)
 even_numbered={x:x **2 for x in range(0,10) if (x%2==0)}
 print(even_numbered)
 
+color="yellow"
+for i in color:
+    if i=='l':
+        continue
+    print(i)
 
