@@ -59,4 +59,4 @@ number=lambda x,y:x if x>y else y
 print(number(2,3))
 
 #similarly we check even ,odd,negativ ,psotive conditions using lambda function
-
+#the def keyword is used to define the normal functions and the lambda keyword is used to create anonymous functions.
