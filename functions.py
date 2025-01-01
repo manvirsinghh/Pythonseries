@@ -60,3 +60,31 @@ print(number(2,3))
 
 #similarly we check even ,odd,negativ ,psotive conditions using lambda function
 #the def keyword is used to define the normal functions and the lambda keyword is used to create anonymous functions.
+
+# def fact(n):
+#     if n==0:
+#         return 1
+#     else:
+#         return n* fact(n-1)
+#     print(fact(4))
+
+#factorial of  number
+def factorial(n):
+    if n == 0:  
+        return 1
+    else:
+        return n * factorial(n - 1) 
+      
+print(factorial(5))
+
+
+def squared_val(num):
+    return num**2
+print(squared_val(5))
+print(squared_val(8))
+
+def myfunc(x):
+    x=20
+    x=10
+    myfunc(x)
+    print(x)
