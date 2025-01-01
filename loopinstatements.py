@@ -78,4 +78,16 @@ for i in color:
     if i=='l':
         continue
     print(i)
+   
 
+
+    color="magenta"
+    for i in color:
+        if i=="a":
+            break
+        print(i)
+
+    for i in range(0,4):
+        if i==3:
+            pass
+        print(i)
