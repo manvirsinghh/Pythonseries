@@ -32,7 +32,7 @@ from emoji import emojize
 print(emojize(":thumbs_up:"))
 #emojize(":thumbs_up:"):
 # The emoji module is not part of Python's standard library, meaning it is not included by default when you install Python. 
-# To use it, you need to install it separately.
+#ou need to install it separately.
 # The emojize function is provided by the emoji library.
 # It converts the text ":thumbs_up:" (which is the emoji code) into the actual thumbs-up emoji (👍).
 
