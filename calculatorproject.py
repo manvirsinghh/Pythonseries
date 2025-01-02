@@ -28,3 +28,8 @@ elif operation == '5':
     print("the result is :",result)
 else:
     print("invalid choice,plz enter the valid choice")
+
+
+
+
+#similary we can include other operations to perform as many as as we want to add
