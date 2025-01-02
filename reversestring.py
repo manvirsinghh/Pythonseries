@@ -79,3 +79,13 @@ def fact(num):
 num=int(input("enter the value :"))
 result=fact(num)
 print(result)
+
+
+#display multiplication table
+
+num=int(input("enter the number :"))
+print(f"multiplication table of {num} is:")
+for i in range(0,11):
+    print(f"{num} *{i}=",num*i)
+
+
