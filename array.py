@@ -20,4 +20,4 @@ print("last element is :",a[-1])
 number=array('i',[2,3,4,5,6,6,7])
 del number[2]
 print(number)
-print(len(number))
+print(len(number)) 
