@@ -63,5 +63,19 @@ def fact(num):
         return 1
     else:
         return num*fact(num-1)
-fact(5)
-print(fact)
+num=5
+result=fact(5)
+print(result)
+
+
+#if we want to take input for number then it can be done as follows:
+def fact(num):
+    if num<0:
+        return 
+    elif num==0 or num==1:
+        return 1
+    else:
+        return num*fact(num-1)
+num=int(input("enter the value :"))
+result=fact(num)
+print(result)
