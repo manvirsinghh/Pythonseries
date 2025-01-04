@@ -49,5 +49,34 @@ class Instructor:
         self.name =name
         self.address =address
     def display(self):
-Instructor_1=Instructor("manvir","gurgaon")
+       Instructor_1=Instructor("manvir","gurgaon")
 print(instructor_1.name)
+
+
+class Dog:
+    species="canine" # class attribute it will be shared by every object of class 
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+
+dog1= Dog("german shepard",5)
+print(dog1.name)
+print(dog1.age)
+
+dog2=Dog("pitbull",5)
+print(dog2.name)
+print(dog2.age)
+
+# class Dog:
+#     species = "Canine"  # Class attribute
+
+#     def __init__(self, name, age):
+#         self.name = name  # Instance attribute
+#         self.age = age  # Instance attribute
+
+# # Creating an object of the Dog class
+# dog1 = Dog("Buddy", 3)
+
+# print(dog1.name) 
+# print(dog1.species)
+
