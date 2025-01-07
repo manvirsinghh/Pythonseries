@@ -1,83 +1,131 @@
-print("Welcome to the unit converter system!")
+import tkinter as tk
+from tkinter import ttk
 
 # Function for length conversions
-def convert_length():
-    print("1. Meter to kilometers")
-    print("2. Kilometers to meters")
-    print("3. Miles to kilometers")
-    print("4. Kilometers to miles")
+def convert_length(type):
+    """
+    Converts length units based on the selected type.
     
-    choice = int(input("Enter your choice: "))
+    Parameters:
+    type (str): The type of conversion to perform.
     
-    if choice == 1:
-        print("Meter to kilometer conversion:")
-        meter = int(input("Enter the value: "))
-        print(f"{meter} meter is equal to: {meter / 1000} kilometers")
-    elif choice == 2:
-        print("Kilometer to meter conversion:")
-        kilometer = int(input("Enter the value: "))
-        print(f"{kilometer} kilometer is equal to: {kilometer * 1000} meters")
-    elif choice == 3:
-        print("Miles to kilometers conversion:")
-        miles = int(input("Enter the value: "))
-        print(f"{miles} miles is equal to: {miles * 1.609} kilometers")
-    elif choice == 4:
-        print("Kilometers to miles conversion:")
-        kilometer = int(input("Enter the value: "))
-        print(f"{kilometer} kilometer is equal to: {0.62137119 * kilometer} miles")
-    else:
-        print("Enter a valid choice, please.")
+    Returns:
+    None
+    """
+    try:
+        value = entry.get()
+        if not value:
+            result_string.set("Please enter a value")
+            return
+        
+        value = float(value)
+        
+        if type == '1. Meter to kilometers':
+            result_string.set(f"{value} meter is equal to: {value / 1000} kilometers")
+        elif type == '2. Kilometers to meters':
+            result_string.set(f"{value} kilometer is equal to: {value * 1000} meters")
+        elif type == '3. Miles to kilometers':
+            result_string.set(f"{value} miles is equal to: {value * 1.609} kilometers")
+        elif type == '4. Kilometers to miles':
+            result_string.set(f"{value} kilometer is equal to: {0.62137119 * value} miles")
+    except ValueError:
+        result_string.set("Invalid input. Please enter a number.")
 
 # Function for temperature conversions
-def convert_temperature():
-    print("1. Celsius to Fahrenheit")
-    print("2. Fahrenheit to Celsius")
-    print("3. Celsius to Kelvin")
-    print("4. Fahrenheit to Kelvin")
+def convert_temperature(type):
+    """
+    Converts temperature units based on the selected type.
     
-    choice = int(input("Enter your choice: "))
+    Parameters:
+    type (str): The type of conversion to perform.
     
-    if choice == 1:
-        print("Celsius to Fahrenheit:")
-        celsius = float(input("Enter the value: "))
-        print(f"{celsius} Celsius is equal to: {(9/5)*celsius + 32} Fahrenheit")
-    elif choice == 2:
-        print("Fahrenheit to Celsius:")
-        fahrenheit = float(input("Enter the value: "))
-        print(f"{fahrenheit} Fahrenheit is equal to: {(5/9)*(fahrenheit - 32)} Celsius")
-    elif choice == 3:
-        print("Celsius to Kelvin:")
-        celsius = float(input("Enter the value: "))
-        print(f"{celsius} Celsius is equal to: {celsius + 273.15} Kelvin")
-    elif choice == 4:
-        print("Fahrenheit to Kelvin:")
-        fahrenheit = float(input("Enter the value: "))
-        print(f"{fahrenheit} Fahrenheit is equal to: {((fahrenheit - 32) * 5/9) + 273.15} Kelvin")
+    Returns:
+    None
+    """
+    try:
+        value = entry.get()
+        if not value:
+            result_string.set("Please enter a value")
+            return
+        
+        value = float(value)
+        
+        if type == '1. Celsius to Fahrenheit':
+            result_string.set(f"{value} Celsius is equal to: {(9/5)*value + 32} Fahrenheit")
+        elif type == '2. Fahrenheit to Celsius':
+            result_string.set(f"{value} Fahrenheit is equal to: {(5/9)*(value - 32)} Celsius")
+        elif type == '3. Celsius to Kelvin':
+            result_string.set(f"{value} Celsius is equal to: {value + 273.15} Kelvin")
+        elif type == '4. Fahrenheit to Kelvin':
+            result_string.set(f"{value} Fahrenheit is equal to: {((value - 32) * 5/9) + 273.15} Kelvin")
+    except ValueError:
+        result_string.set("Invalid input. Please enter a number.")
+
+# Create a window
+window = tk.Tk()
+window.title("Unit Converter")
+window.geometry("400x400")
+window.configure(bg='lightblue')
+
+# ttk label
+label = ttk.Label(master=window, text="Welcome to\nUnit Converter", justify='center', font=('caliber', 24, 'bold'), background='lightblue')
+label.pack(pady=20)
+
+items = ('1. Length Conversion', '2. Temperature Conversion')
+conversion_string = tk.StringVar(value=items[0])
+combo = ttk.Combobox(window, values=items, textvariable=conversion_string, width=30)
+combo.pack(pady=10)
+
+from_to_items = [
+    ('1. Meter to kilometers', '2. Kilometers to meters', '3. Miles to kilometers', '4. Kilometers to miles'),
+    ('1. Celsius to Fahrenheit', '2. Fahrenheit to Celsius', '3. Celsius to Kelvin', '4. Fahrenheit to Kelvin')
+]
+from_to_string = tk.StringVar(value=from_to_items[0][0])
+from_to_combo = ttk.Combobox(window, values=from_to_items[0], textvariable=from_to_string, width=30)
+from_to_combo.pack(pady=10)
+
+def update_from_to_combo(event):
+    """
+    Updates the 'from_to_combo' values based on the selected conversion type.
+    
+    Parameters:
+    event: The event that triggered the function.
+    
+    Returns:
+    None
+    """
+    if conversion_string.get() == '1. Length Conversion':
+        from_to_combo['values'] = from_to_items[0]
+        from_to_string.set(from_to_items[0][0])
     else:
-        print("Enter a valid choice, please.")
+        from_to_combo['values'] = from_to_items[1]
+        from_to_string.set(from_to_items[1][0])
 
-# Main function that runs the program
-def main():
-    while True:
-        print("\nMain Menu:")
-        print("1. Length Conversion")
-        print("2. Temperature Conversion")
-        print("3. Exit")
-        
-        choice = int(input("Enter your choice: "))
-        
-        if choice == 1:
-            convert_length()
-        elif choice == 2:
-            convert_temperature()
-        elif choice == 3:
-            print("Thank you for using the Unit Converter!")
-            break
-        else:
-            print("Invalid choice. Please try again.")
+def choose():
+    """
+    Chooses the appropriate conversion function based on the selected conversion type.
+    
+    Returns:
+    None
+    """
+    value = from_to_string.get()
+    if conversion_string.get() == '1. Length Conversion':
+        convert_length(value)
+    elif conversion_string.get() == '2. Temperature Conversion':
+        convert_temperature(value)
 
-# Running the main function
-if __name__ == "__main__":
-    main()
+# Events
+combo.bind('<<ComboboxSelected>>', update_from_to_combo)
 
-#similarly we can add more uni converter like these two 
+entry = ttk.Entry(master=window, width=30)
+entry.pack(pady=10)
+
+result_string = tk.StringVar(window, value="")
+result = ttk.Label(window, textvariable=result_string, background='lightblue')
+result.pack(pady=10)
+
+button = ttk.Button(master=window, text="Convert", command=choose)
+button.pack(pady=10)
+
+# Run the window
+window.mainloop()
