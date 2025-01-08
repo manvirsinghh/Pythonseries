@@ -1,2 +1,0 @@
-we are learning file i/o operations
-hello

@@ -1,0 +1,2 @@
+2025-01-08,household items,5000.0
+2025-01-08,jewellery,10000.0
