@@ -26,7 +26,7 @@ root.title("Simple Calculator")
 root.geometry("400x600")
 
 # Create an entry widget to display the input and result
-entry = tk.Entry(root, width=16, font=("Arial", 24), borderwidth=2, relief="solid", justify="center")
+entry = tk.Entry(root, width=16, font=("Arial", 24), borderwidth=2, relief="solid", justify="right")
 entry.grid(row=0, column=0, columnspan=4, pady=10)
 
 # Button layout (text, row, column)
