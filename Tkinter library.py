@@ -37,8 +37,9 @@ root.title("Welcome to my app")  # Set window title
 
 # Create a StringVar() to hold the text dynamically
 text_var = tk.StringVar()
+# StringVar() is a special type of variable used in Tkinter to store and manage text values (strings).
 text_var.set("Enter something below:")
-
+# The .set() method is used to set the value of the StringVar(). It is like assigning a value to a normal Python variable but in a way that any widgets bound to it will automatically update when the value changes.
 # Create a label widget with textvariable
 label = tk.Label(
     root,
