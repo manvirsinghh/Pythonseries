@@ -20,3 +20,8 @@ dictionary={'marks':78,'age':45}
 print(dictionary)
 print(dictionary['marks'])
 print(dictionary.get('marks'))
+print(d1.items())
+print(d1.pop)
+print(d1.keys())
+print(d1.values())
+print(d1.items())
