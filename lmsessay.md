@@ -56,12 +56,27 @@ This will show our app(library_management) and frappe(default)
 ### let's setup desk of application
 First of all create the all doctypes that needed
 #### Create article doctype
-* Step1: search for doctype list in search bar
+
+-  Step1: search for doctype list in search bar
+
 <br>
-*Step 2:click on button +add doctype 
-*Step 3:File module with library management system and doctype name is article.
-*Step 4: Save
-Step 5:Go to fields 
+
+- Step 2:click on button +add doctype
+
+<br>
+
+- Step 3:File module with library management system and doctype name is article.
+
+<br>
+
+- Step 4: Save
+
+<br>
+
+- Step 5:Go to fields
+
+<br>
+
 We can add any number of fields in this doctype with roles and permissions whatever we want to create and give to someone else
 <br>
 
@@ -72,6 +87,7 @@ bench --site library.localhost mariadb
 ```
 It will show the table with all columns 
 # Similarly i have created other doctypes as well like,
+
 Library member,library transactions,Library Membership,LibrarySettings
 <br>
 Now we can adjust each doctype with permissions ,roles and restrictions we want to add in this our all doctypes will be created completely and made necessary changes in the files according to documentation.
@@ -83,7 +99,7 @@ After doing all these steps we have now to render our pages for website vistiors
 Basically we are workig with desk which is the admin interface accessible by System Users,but if we want to give limited access to our customers as in our case we want library members to be able to view available articles that they can issue from our website for this we will use protal pages which will helps us to achieve this.Follow this steps to achieve it
 Go to Article doctype, and scroll down to the Web View section.
 
-##steps:-
+## steps:-
   - Enable Has Web View and Allow Guest to View
  - Enter articles in the Route field
   - Add a field named Route in the fields table
@@ -97,7 +113,7 @@ Go to Article doctype, and scroll down to the Web View section.
    The default web view that is created is very basic and just serves as a starting point for us to customize and improve it."
 When we made article web view two files were created namely:-
 
--article.html and
+- article.html and
 - article_row.html
 After this we have to style our pages as frappe use bootstrap 4 by default for its web views and for styling our page we have to  do necessary addition or chnages to article.html file.
 <br>
@@ -106,6 +122,9 @@ if we have fill the all fields of the article we wish to see ,
  it will show page according to our amendments in the article.html file .It will show only the article we want to see ,but if we want to have complete list of articles on page and whatever we want to read the details or decription by clicking on it then we want to make necessary changes in the article_row.html file .It will show page with list of all articles and can read according to our choice.
 
 <br>
-This is all about the Library management system that i have learned and elaborate here
 
+This is all about the Library management system that i have learned and elaborate here
+<br>
+
+# Image
 [lms](/home/abc12/Pictures/Screenshot from 2025-01-18 09-01-16.png)
