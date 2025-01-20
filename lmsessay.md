@@ -127,4 +127,4 @@ This is all about the Library management system that i have learned and elaborat
 <br>
 
 # Image
-[lms](/home/abc12/Pictures/Screenshot from 2025-01-18 09-01-16.png)
+![lms](https://github.com/user-attachments/assets/9e195dd9-69cf-4363-9735-488c3b23c98a))
